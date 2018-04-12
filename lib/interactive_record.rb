@@ -51,7 +51,7 @@ class InteractiveRecord
     binding.pry
     sql = "
     SELECT *
-    FROM #{table_name_for_insert}
+    FROM #{self.table_name}
     WHERE name = '#{name}'
     "
     DB[:conn].execute(sql)
