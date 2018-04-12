@@ -48,12 +48,12 @@ class InteractiveRecord
   end
 
   def self.find_by_name(name)
+    binding.pry
     sql = "
     SELECT *
     FROM #{table_name_for_insert}
     WHERE name = '#{name}'
     "
-    binding.pry
     DB[:conn].execute(sql)
   end
 
