@@ -53,6 +53,7 @@ class InteractiveRecord
     FROM #{table_name_for_insert}
     WHERE name = '#{name}'
     "
+    binding.pry
     DB[:conn].execute(sql)
   end
 
